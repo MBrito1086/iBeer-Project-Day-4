@@ -11,11 +11,18 @@ COLORS:
 light tan: #eeebda
 
 */
+html{
+  display: flex;
+  justify-content: center;
+}
 body{
     font-family: 'Noto Serif', serif;
     line-height: 1.8;
     margin: 0;
     background-color: #eeebda;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 h1, h2, h3{
     font-family: "Josefin Sans", sans-serif;
@@ -31,17 +38,20 @@ img{
     width: 1000px;
 
     /*
-        TODO: 
+        TODO:
         - Center up the page
         - Create a flexbox containerer for
         the major page sections
     */
+    display: flex;
+    flex-wrap: wrap;
 }
 #site-header{
     /*
         TODO
         - Flexbox property here
     */
+    /*display: flex;*/
 }
 #site-header div{
     text-align: center;
@@ -49,11 +59,11 @@ img{
     font-size: 4em;
 
     /*
-        TODO: 
+        TODO:
         - Add a background image "header-img.jpg"
         make sure that the path to the image is correct
     */
-
+    background-image: url("img/header-img.jpg");
     background-size: cover;
     background-position: right bottom;
 }
@@ -71,17 +81,21 @@ img{
     bottom: 20px;
     text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3 );
     /*
-        TODO: 
+        TODO:
         - Use the script font: 'Dancing Script' fot this text
     */
+    font-family: Dancing Script;
 }
 #main-navigation{
     background: #444;
 
     /*
-        TODO: 
+        TODO:
         - Use Flexbox to arrange the navigation links
     */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2em;
 }
 #main-navigation a{
     display: block;
@@ -91,38 +105,54 @@ img{
     padding: 10px 20px;
 
     /*
-        TODO: 
+        TODO:
         - Flexbox - Create general spacing between nav links
     */
+    display: flex;
+    justify-content: flex-end;
 }
 #main-navigation #logo{
     margin-right: 400px;
-
+    display: flex;
+    justify-content: flex-start;
     /*
-        TODO: 
+        TODO:
         - Flexbox - The logo needs to take up more space
         that the other links
     */
+    flex-wrap: wrap;
 }
 main{
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
     /*
-        TODO: 
+        TODO:
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    top: -40px;
+    left: 30px;
+    width: 56%;
 }
 aside{
     padding: 20px;
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
     /*
-        TODO: 
+        TODO:
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
+    width: 20%;
+    position: relative;
+    top: -40px;
+    left: 30px;
 }
 aside h3{
     text-align: center;
@@ -159,36 +189,38 @@ article time{
 }
 article img{
     /*
-        TODO: 
+        TODO:
         - Float article images to the right
         and match sizes and spacing to the mockup
     */
+    float: right;
+    height: 50%;
+    width: 50%;
 }
 article footer p{
     /*
-        TODO: 
+        TODO:
         - Style the article footer
         HINT: Look to the article header;
     */
+    line-height: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-top: 1px solid #ccc;
+    text-transform: uppercase;
+    padding-top: 1em;
 }
 #site-footer{
-    
+    color: white;
     background: #333;
     /*
-        TODO: 
+        TODO:
         - Style the site footer
     */
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
